@@ -8,6 +8,8 @@ I will continue to update this repo with relevant links, documents, personal not
 
 At this time I am currently studying for the Cloud Practitioner, Solutions Architect Associate & SysOps Associate certifications so the material I share will be in aid for these exams only. 
 
+The list will be extensive, my reccommendations are that you breeze through the majority and pick only a handful that relate to your specific part in your journey so as to not be ovverwhelmed. But if you're like me then create a folder on your browsers' bookmark and use them all!
+
 Leave a star if any of the resources help you and point others in the right direction. 
 
-At the time of writing this i'm still working my way around understanding Github however links from anyone who has studied for these certifications or currently studying for them are welcomed so please contribute in any way that you can and help others get their leg on the ladder!
+At the time of writing this I'm still working my way around understanding Github however links from anyone who has studied for these certifications or currently studying for them are welcomed so please contribute in any way that you can and help others get their leg on the ladder!
