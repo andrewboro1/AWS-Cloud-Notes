@@ -1,1 +1,0 @@
-- **Qwiklabs**: Qwiklabs provides real cloud environments that help developers and IT professionals learn cloud platforms and software https://www.qwiklabs.com/
