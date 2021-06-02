@@ -1,0 +1,82 @@
+AWS Management & Governance
+
+•	AWS CloudFormation – Allows Version control of infrastructure
+•	AWS Quick Start reference deployments – Deploy popular technologies quickly 
+•	AWS Auto Scaling – Automates adding/removing server capacity (based on demand) Allows costs to be reduced by automatically turning off resources that aren’t in use.
+•	AWS Personal Health Dashboard – Provides alerts and remediation guidance when AWS events impact your resources and a personalized view into the performance and availability of the services underlying your resources. 
+•	AWS Trusted Advisor – Offers best practice checks across five categories: cost optimization; security; fault tolerance; performance; and service limits.
+•	Amazon CloudWatch – Monitors and troubleshoots resources such as EC2, Dynamo DB, RDS DB
+•	AWS Consolidated Billing – For billing purposes, AWS treats all the accounts on the consolidated bill as one account. 
+•	AWS Organizations – Centrally manages access policies across multiple AWS accounts. Automates AWS account creation and management, controls access to AWS services, consolidates billing across multiple AWS accounts, configures AWS services across multiple accounts. 
+•	AWS CloudTrail – A service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. Can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure. Event history which simplifies security analysis, resource change tracking and trouble shooting.
+
+AWS Pricing Models
+
+•	On-demand instances: Compute capacity is charged per hour or second with no long-term commitments and no interruptions. 
+•	Spot instances – Cost effective buying option if you can be flexible about when your applications run. Well suited for data analysis, batch jobs, background processing, and optional tasks.
+•	Convertible RI – When your needs change, you can exchange tour Convertible Reserved Instances and continue to benefit from the reservations pricing discount. The new Convertible RI must be greater than or equal to the original instance.
+
+
+
+
+AWS Migration & Transfer
+
+•	AWS Snowball – A petabyte-scale data transport solution which also allows you to access the compute power of the AWS Cloud locally.
+
+AWS Shared Responsibility Model
+
+•	Responsibilities vary depending on the services used 
+•	Configuring infrastructure devices.
+•	AWS customers are welcome to carry out security assessments and penetration tests against their AWS infrastructure without prior approval for 8 services:
+1.	EC2, NAT gateway, Elastic Load Balancing 
+2.	RDS
+3.	CloudFront
+4.	Aurora
+5.	API gateways
+6.	Lambda, Lambda edge
+7.	Lightsail
+8.	Elastic Beanstalk
+
+AWS Security, Identity, & Compliance
+
+•	Amazon Inspector – An automated security assessment service that helps improve the security and compliance of applications deployed on AWS.
+•	AWS Trusted Advisor – Offers best practice checks and recommendations across five categories: cost optimization; security; fault tolerance; performance; and service limits.
+•	AWS Artifact- A self-service audit artifact retrieval portal that provides customers with on-demand access to AWS compliance documentation and AWS agreements. 
+•	AWS WAF (Web Application Firewall) – A service that helps customers implement strong DDoS mitigations to control and absorb traffic and deflect unwanted requests.
+•	AWS Shield – A managed DDoS protection service that provides always-on detection and automatic inline mitigations to safeguard web applications running on AWS.
+
+
+
+
+AWS Database
+
+•	Amazon RDS (Relational Database Service) – Makes it easy to set up, operate, and scale a relational database in the cloud. Can be used to host Amazon Aurora, PostgreSQL, MySQL, Maria DB, Oracle, and Microsoft SQL Server databases.
+•	Amazon DynamoDB – A NoSQL database service. NoSQL databases are used for non-structured data that are typically stored in JSON-like, key-value documents.
+•	Amazon Aurora – A MySQL and PostgreSQL-compatible relational database built for the cloud.
+
+
+AWS Support
+
+•	AWS Support Concierge – A team included as part of the Enterprise Support plan that are AWS billing and account experts that specialize in working with enterprise accounts. 
+•	AWS Infrastructure Event Management – Common use-case examples include advertising launches, new product launches, and infrastructure migrations to AWS.
+•	AWS Abuse Team – Assist when resources are being used to engage in: Spam, Port Scanning, Denial of Service (DOS), Intrusion attempts, Hosting objectionable or copyrighted content, and Distributing malware.
+
+AWS Application Integration
+
+•	Amazon SQS (Simple Queue Service) – A fully managed message queueing service. SQS lets your decouple application components so that they run independently, increasing the overall fault tolerance of the system.
+
+AWS Best Practices & Design Principles
+
+•	Principle of elasticity – Improves architecture’s design. Involves the ability of a service to scale its resources out or in (up or down) based on changes in demand.
+•	Elastic Load Balancing – A service to regularly perform health checks and distribute traffic only to healthy instances.
+
+AWS Networking & Content Delivery 
+
+•	Amazon CloudFront – A fast content delivery network (CDN) service that securely delivers data, video, applications, and API’s to customers globally with low latency, high transfer speeds, all within a developer-friendly environment.
+
+AWS Cost Management
+
+•	Amazon CloudWatch – You can set up a building alarm that triggers if your costs exceed a threshold that you set. Can also be configured to trigger an SNS notification to your email address.
+•	AWS Budgets – Gives you the ability to set custom budgets that alert you when your costs or usage exceed (or are forecasted to exceed) your budgeted amount.
+
+
