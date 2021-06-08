@@ -2,19 +2,22 @@ AWS Management & Governance
 
 •	AWS CloudFormation – Allows Version control of infrastructure
 •	AWS Quick Start reference deployments – Deploy popular technologies quickly 
-•	AWS Auto Scaling – Automates adding/removing server capacity (based on demand) Allows costs to be reduced by automatically turning off resources that aren’t in use.
+•	AWS Auto Scaling – Automates adding/removing server capacity (based on demand) Allows costs to be reduced by automatically turning off resources that are not in use.
 •	AWS Personal Health Dashboard – Provides alerts and remediation guidance when AWS events impact your resources and a personalized view into the performance and availability of the services underlying your resources. 
 •	AWS Trusted Advisor – Offers best practice checks across five categories: cost optimization; security; fault tolerance; performance; and service limits.
 •	Amazon CloudWatch – Monitors and troubleshoots resources such as EC2, Dynamo DB, RDS DB
 •	AWS Consolidated Billing – For billing purposes, AWS treats all the accounts on the consolidated bill as one account. 
 •	AWS Organizations – Centrally manages access policies across multiple AWS accounts. Automates AWS account creation and management, controls access to AWS services, consolidates billing across multiple AWS accounts, configures AWS services across multiple accounts. 
-•	AWS CloudTrail – A service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. Can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure. Event history which simplifies security analysis, resource change tracking and trouble shooting.
+•	AWS CloudTrail – A service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. Can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure. Event history which simplifies security analysis, resource change tracking and trouble shooting. This provides a great resource for governance, compliance, and risk auditing.
 
 AWS Pricing Models
 
 •	On-demand instances: Compute capacity is charged per hour or second with no long-term commitments and no interruptions. 
 •	Spot instances – Cost effective buying option if you can be flexible about when your applications run. Well suited for data analysis, batch jobs, background processing, and optional tasks.
 •	Convertible RI – When your needs change, you can exchange tour Convertible Reserved Instances and continue to benefit from the reservations pricing discount. The new Convertible RI must be greater than or equal to the original instance.
+•	BYOL – Enables AWS customers to use their existing server-bound software licenses, including Windows Server, SQL Server, and SUSE Linux Enterprise Server.
+•	Dedicated Hosts – Provide additional control over your instances and visibility into Host level resources and tooling that allows you to manage software that consumes licenses on a per-core or per-socket basis, such as Windows Server and SQL Server. Reserved for one customer.
+•	Saving Plans – A flexible pricing model that offers low prices on EC2, Lambda and Fargate usage, in exchange for a commitment to a consistent amount of usage (measured in $/hour) for a 1 or 3 year term.
 
 
 
@@ -37,6 +40,15 @@ AWS Shared Responsibility Model
 7.	Lightsail
 8.	Elastic Beanstalk
 
+•	Inherited Controls – Controls which a customer fully inherits from AWS: Physical and Environmental controls.
+•	Shared Controls – Controls which apply to both the infrastructure layer and customer layers, but in separate contexts or perspectives. Examples include Patch Management, Configuration Management, Awareness & Training
+ As a customer deploying an application on AWS infrastructure, you inherit security controls pertaining to the AWS physical, environmental and media protection, and no longer need to provide a detailed description of how you comply with these control families.
+For example: Let’s say you have built an application in AWS for customers to securely store their data. But your customers are concerned about the security of the data and ensuring compliance requirements are met. To address this, you assure your customer that “our company does not host customer data in its corporate or remote offices, but rather in AWS data centers that have been certified to meet industry security standards.” That includes physical and environmental controls to secure the data, which is the responsibility of Amazon. Companies do not have physical access to the AWS data centers, and as such, they fully inherit the physical and environmental security controls from AWS.
+•	Inherited Controls – Controls which a customer fully inherits from AWS: Physical & Environmental controls.
+•	Shared Controls – Controls which apply to both the infrastructure layer and customer layers, but in completely separate contexts or perspectives. In a shared control, AWS provides the requirements for the infrastructure and the customer must provide their own control implementation within their use of AWS services. Examples include: Patch Management, Configuration Management, Awareness & Training.
+•	Amazon RDS – Once your database is up and running Amazon RDS automates common administrative tasks such as performing backups and patching the software that powers your database. You’ll need to build the relational schema that best fits your use case and are responsible for any performance tuning to optimize your database for your applications workflow.
+
+
 AWS Security, Identity, & Compliance
 
 •	Amazon Inspector – An automated security assessment service that helps improve the security and compliance of applications deployed on AWS.
@@ -44,6 +56,8 @@ AWS Security, Identity, & Compliance
 •	AWS Artifact- A self-service audit artifact retrieval portal that provides customers with on-demand access to AWS compliance documentation and AWS agreements. 
 •	AWS WAF (Web Application Firewall) – A service that helps customers implement strong DDoS mitigations to control and absorb traffic and deflect unwanted requests.
 •	AWS Shield – A managed DDoS protection service that provides always-on detection and automatic inline mitigations to safeguard web applications running on AWS.
+•	Data protection – Refers to protecting data while in-transit (as it travels to and from Amazon S3) and at rest (while it is stored on disks in AWS data centers). The AWS customer is responsible for protecting their data either at rest or in transit for all services (including S3).
+•	Patch management – A shared control between AWS and the customer. AWS is responsible for patching the underlying hosts, updating the firmware, and fixing flaws within the infrastructure, but customers are responsible for patching their guest operating system and applications. 
 
 
 
@@ -59,24 +73,59 @@ AWS Support
 
 •	AWS Support Concierge – A team included as part of the Enterprise Support plan that are AWS billing and account experts that specialize in working with enterprise accounts. 
 •	AWS Infrastructure Event Management – Common use-case examples include advertising launches, new product launches, and infrastructure migrations to AWS.
-•	AWS Abuse Team – Assist when resources are being used to engage in: Spam, Port Scanning, Denial of Service (DOS), Intrusion attempts, Hosting objectionable or copyrighted content, and Distributing malware.
+•	AWS Abuse Team – Assist when resources are being used to engage in: Spam, Port Scanning, Denial of Service (DOS), Intrusion attempts, hosting objectionable or copyrighted content, and Distributing malware.
+•	APN consulting Partners – Professional services firms that help customers design, architect, build, migrate, and manage their workloads and applications on AWS.
 
 AWS Application Integration
 
 •	Amazon SQS (Simple Queue Service) – A fully managed message queueing service. SQS lets your decouple application components so that they run independently, increasing the overall fault tolerance of the system.
 
+
+
 AWS Best Practices & Design Principles
 
 •	Principle of elasticity – Improves architecture’s design. Involves the ability of a service to scale its resources out or in (up or down) based on changes in demand.
 •	Elastic Load Balancing – A service to regularly perform health checks and distribute traffic only to healthy instances.
+•	Amazon DynamoDB – Data is stored on SSDs and is automatically replicated across multiple Availability Zones in an AWS region providing built in fault tolerance. Automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your throughput and storage requirements, while maintaining consistent and fast performance. D
+•	Amazon S3 – Data in all Amazon S3 storage classes is redundantly stored across multiple Availability Zones (except S3 One Zone-IA). Provides durable infrastructure to store important data and is designed for durability of 99.999999999% of objects. 
+•	Amazon EC2 Auto Scaling – Monitors your applications and automatically adjusts capacity (up or down) to maintain steady, predictable performance at the lowest possible cost.
+
+
+Additional information:
+Creating a software system is a lot like constructing a building. If the foundation is not solid, structural problems can undermine the integrity and function of the building. When architecting technology solutions on Amazon Web Services (AWS), if you neglect the five pillars of operational excellence, security, reliability, performance efficiency, and cost optimization, it can become challenging to build a system that delivers on your expectations and requirements. Incorporating these pillars into your architecture helps produce stable and efficient systems. This allows you to focus on the other aspects of design, such as functional requirements. The AWS Well-Architected Framework helps cloud architects build the most secure, high-performing, resilient, and efficient infrastructure possible for their applications.     
+•	
+
 
 AWS Networking & Content Delivery 
 
 •	Amazon CloudFront – A fast content delivery network (CDN) service that securely delivers data, video, applications, and API’s to customers globally with low latency, high transfer speeds, all within a developer-friendly environment.
+•	AWS VPN – Establishes secure connections between your on premises networks, remote offices, client devices and the AWS global network.
+•	AWS Direct Connect – Does not involve the internet; instead it uses dedicated, private network connections between your on-premises network or branch office site and Amazon VPC.
+•	AWS Global accelerator – Improves performance for global applications by routing end-user requests to the closest AWS region.
+•	Amazon Virtual Private Cloud (Amazon VPC) – Lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment, including selection of the IP address range, creation of subnets, and configuration of route tables and network gateways.
 
 AWS Cost Management
 
 •	Amazon CloudWatch – You can set up a building alarm that triggers if your costs exceed a threshold that you set. Can also be configured to trigger an SNS notification to your email address.
 •	AWS Budgets – Gives you the ability to set custom budgets that alert you when your costs or usage exceed (or are forecasted to exceed) your budgeted amount.
+•	Right sizing – The process of matching instance types and sizes to your workload performance and capacity requirements at the lowest possible cost. By right-sizing before migration you can significantly reduce your infrastructure costs. Because your resource needs are always changing, right-sizing must become an ongoing process to continually achieve cost optimization.
 
+AWS Cloud Computing Benefits
+
+•	Distributed Infrastructure – Allows customers to reduce latency to users from all around the world.
+•	High availability – Eliminates single points of failure meaning it can withstand the failure of an individual component or multiple components such as hard disks, servers, and network links. The best way to understand and avoid the single point of failure is to begin by making a list of all major points of your architecture. You need to break the points of failure is to begin by making a list of all major points of your architecture. You need to break the points down and understand them further. Then, review each of these points and think what would happen if any of these failed. AWS gives you the opportunity to automate recovery and reduce disruption at every layer of your architecture.
+•	On-demand infrastructure – AWS allows you to provision the required resources for your application in minutes and also allows you to stop them when you don’t need them.
+
+AWS Global Infrastructure 
+
+•	Disaster Recovery – Preparing for and recovering from events that have a negative impact on your business continuity or finances.
+•	Active-Active Solution – Your workload is deployed to, and actively serving traffic from, multiple AWS Regions. 
+
+AWS Analytics
+
+•	Amazon EMR – Helps you analyze and process vast amounts of data by distributing the computational work across a cluster of virtual servers running in the AWS Cloud. The cluster is managed using an open-sourced framework called Hadoop.
+
+AWS Developer Tools
+
+•	AWS X-Ray – With this service you can understand how your application and its underlying services are performing so you can identify and troubleshoot the root cause of performance issues and errors. 
 
