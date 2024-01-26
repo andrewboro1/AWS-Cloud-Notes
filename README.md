@@ -1,12 +1,12 @@
-# AWS-Cloud-Notes
+# Cybersecurity notes & links
 
-This repo will contain a series of folders documenting the learing tools that assisted me in my AWS Cloud journey.
+This repo will contain a series of folders documenting the learing tools that are assisting me on my Cybersecurity journey.
 
 My aim is to provide a foundation of materials that can be built upon by self exploration and is in no means meant to serve as a be all end all resource list.
 
-I will continue to update this repo with relevant links, documents, personal notes and resources that I find help me understand the core topics in preparation for the certification exams. 
+I will continue to update this repo with relevant links, documents, personal notes and resources that I find help me understand the core topics in preparation for various certification exams. 
 
-At this time I am currently studying for the Cloud Practitioner & SysOps Associate certifications so the material I share will be in aid for these exams only. 
+At this time I am currently studying for the CompTIA SEcurity+ certification so the material I share will be in aid for these exams primarily. 
 
 The list will be extensive, my recommendations are that you breeze through the majority and pick only a handful that relate to your specific part in your journey so as to not be ovverwhelmed. But if you're like me then create a folder on your browsers' bookmark and use them all!
 
